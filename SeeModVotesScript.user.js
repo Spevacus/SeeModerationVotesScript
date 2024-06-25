@@ -43,9 +43,9 @@ const canSeeCloseVotes = $('.js-close-question-link').length > 0;
         return;
     }
     const pathName = window.location.pathname;
-    const questionId = StackExchange.question.getQuestionId();
 
     if (!pathName.startsWith("/review/")) {
+        const questionId = StackExchange.question.getQuestionId();
         const result = await fetchVotes(questionId);
         appendButtons(result);
     } else {
@@ -53,6 +53,7 @@ const canSeeCloseVotes = $('.js-close-question-link').length > 0;
         $(document)
             .ajaxComplete(async (event, request, settings) => {
             if (reviewRegex.test(settings.url)) {
+                const questionId = StackExchange.question.getQuestionId();
                 let reviewTitle = $('.fs-title')[0];
                 // If the review pertains to a question, include the buttons.
                 // NICETOHAVE: If looking at an Answer review, append buttons to the Question panel's post menu
