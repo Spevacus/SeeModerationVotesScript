@@ -4,6 +4,8 @@
 // @version      1.0
 // @namespace    Spevacus
 // @author       Spevacus
+// @updateURL	 https://github.com/Spevacus/SeeModerationVotesScript/raw/main/SeeModVotesScript.user.js
+// @downloadURL  https://github.com/Spevacus/SeeModerationVotesScript/raw/main/SeeModVotesScript.user.js
 //
 // @match      *://*.stackoverflow.com/questions/*
 // @match      *://*.stackoverflow.com/review/*
